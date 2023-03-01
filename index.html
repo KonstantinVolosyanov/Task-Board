@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Task-board</title>
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+   <script src="/main.js" defer></script>
+</head>
+
+<body onload="init()">
+
+   <h1>My Task Board</h1>
+
+   <div id="formDiv">
+      <form onsubmit="createTask()">
+         <button class="btn btn-info" id="buttonClear" onclick="clearInput()">Clear
+         </button>
+         <label>new task...</label>
+         <textarea placeholder="Enter task info:" type="text" id="infoTextBox" required></textarea>
+
+         <div id="flexDate">
+            <div id="dateDiv" class="md-form md-outline input-with-post-icon datepicker">
+               <label id="labelDate">date</label>
+               <input type="date" id="dateBox" required />
+            </div>
+
+            <div id="timeDiv">
+               <label id="labelTime">time</label>
+               <input type="time" id="timeBox" required />
+            </div>
+         </div>
+
+         <button class="btn btn-info" id="buttonAdd" type="submit">Add task</button>
+
+         <br><br>
+      </form>
+
+      <div id="cardDiv">
+      </div>
+   </div>
+
+</body>
+
+</html>

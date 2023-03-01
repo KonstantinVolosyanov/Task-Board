@@ -1,0 +1,207 @@
+
+/* add a font-face */
+@font-face {
+    font-family: newFont;
+    src: url("/Assets/Broken\ Heart\ Regular.otf");
+}
+
+/* Background Image */
+body {
+   background: url(/IMG/tile.jpg) ;
+   font-family: Arial, Helvetica, sans-serif;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+
+/* h1 */
+h1 {
+    font-family: newFont;
+    text-align: center;
+    font-size: 80px;
+    color: rgb(36, 36, 36);
+    margin: -25px;
+    margin-top: 30px;
+}
+
+ 
+/* FORM DESIGN ----------------------------------------------------------------- */
+form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(/IMG/formbg.jpg);
+    width: 500px;
+    height: 400px; 
+    border-radius: 10px;
+}
+
+/* Text-area*/
+#infoTextBox {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed #0dcaf0;
+    resize: none;
+    width: 400px;
+    height: 100px;
+}
+
+/* Labels*/
+label {
+    display: block;
+    text-align: center;
+    font-family: newFont;
+    font-size: x-large;
+    padding-top: 10px;
+    color: black;
+    letter-spacing: 3px;
+}
+
+#labelTime, #labelDate {
+    margin-top: 9px;
+    margin-bottom: -2px;
+    font-size: large;
+}
+
+
+
+/* DATE & TIME -------------------------------------------------------------- */
+#flexDate {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+input {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+#dateDiv, #timeDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* BUTTONS ---------------------------------------------------------------- */
+#buttonClear {
+    display: inline-block;
+    margin-left: 430px;
+   margin-top: 10px;
+}
+
+#buttonAdd {
+    display:inline-block;
+    margin-top: 45px;
+    margin-left: 130px;
+    width: 250px;
+    height: 40px;
+}
+
+.removeBtn {
+    background: none;
+    display:block;
+    margin-right: -10px;
+    margin-left: auto;
+    margin-top: 22px ;
+    border: none;
+    visibility: hidden;
+}
+
+.card:hover .removeBtn {
+    visibility: visible;
+}
+
+/* Glyph icon */
+i {
+    display:block;
+    font-size: 20px;
+    color:  rgb(155, 56, 56);
+}
+
+
+/* CARD --------------------------------------------------------------------- */
+.card {
+    display: inline-block;
+    background: url(/IMG/notebg.png);
+    width:180px;
+    height:400px;
+    font-size: small;
+    font-weight: bold;
+    color: black; 
+    border:none;
+    margin: 30px;
+    padding: 15px;
+    padding-top: 0;
+    background-repeat: no-repeat;
+}
+
+/* Paragraphs */
+#taskInfoP {
+    border-bottom: 1px dotted;
+    color:  rgb(155, 56, 56);
+}
+
+.dateP {
+    border-top: 1px dotted;
+    margin-top: 10px;
+    font-size: medium;
+    line-height: 1.5;
+    color: rgb(155, 56, 56);
+}
+
+.timeP {
+    line-height: 0;
+    font-size: medium;
+    font-weight: bold;
+    color:  rgb(155, 56, 56);
+}
+
+.infoP {
+    width: 150px;
+    height: 100px ;
+    font-weight: bold;
+    color: black;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+}
+
+/* Scroll-bars */
+
+*::-webkit-scrollbar {
+     width: 5px;
+}
+   
+  *::-webkit-scrollbar-track {
+    background: #e9e38b;
+    width: 5px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background:  rgb(139, 126, 67);
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(155, 56, 56);
+    
+}
+
+/* Animation */
+.fade-in {
+    animation: fade-in 1s forwards ease-in;
+    animation-iteration-count: 1;
+}
+
+@keyframes fade-in {
+  0%{ opacity: 0 }
+  100% { opacity: 1 }
+}
+
+
